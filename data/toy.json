@@ -1,5 +1,38 @@
 [
     {
+        "name": "goku",
+        "price": 300,
+        "labels": [
+            "Figure",
+            "Baby"
+        ],
+        "_id": "km2yv",
+        "createdAt": 1720630892550,
+        "inStock": true
+    },
+    {
+        "name": "fafa",
+        "price": 300,
+        "labels": [
+            "Battery Powered",
+            "Baby"
+        ],
+        "_id": "j9Zoj",
+        "createdAt": 1720628879417,
+        "inStock": true
+    },
+    {
+        "name": "sonic",
+        "price": 50,
+        "labels": [
+            "Hero",
+            "Doll"
+        ],
+        "_id": "cW6XJ",
+        "createdAt": 1720626377118,
+        "inStock": true
+    },
+    {
         "name": "Mark",
         "price": 700,
         "labels": [

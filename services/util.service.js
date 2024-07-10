@@ -6,7 +6,7 @@ import fs from 'fs'
 export const utilService = {
   readJsonFile,
   // download,
-  // httpGet,
+  httpGet,
   makeId
 }
 
@@ -33,29 +33,29 @@ function readJsonFile(path) {
 //   })
 // }
 
-// function httpGet(url) {
-//   const protocol = url.startsWith('https') ? https : http
-//   const options = {
-//     method: 'GET'
-//   }
+function httpGet(url) {
+  const protocol = url.startsWith('https') ? https : http
+  const options = {
+    method: 'GET'
+  }
 
-//   return new Promise((resolve, reject) => {
-//     const req = protocol.request(url, options, (res) => {
-//       let data = ''
-//       res.on('data', (chunk) => {
-//         data += chunk
-//       })
-//       res.on('end', () => {
-//         resolve(data)
-//       })
-//     })
-//     req.on('error', (err) => {
-//       reject(err)
-//     })
-//     req.end()
-//   })
+  return new Promise((resolve, reject) => {
+    const req = protocol.request(url, options, (res) => {
+      let data = ''
+      res.on('data', (chunk) => {
+        data += chunk
+      })
+      res.on('end', () => {
+        resolve(data)
+      })
+    })
+    req.on('error', (err) => {
+      reject(err)
+    })
+    req.end()
+  })
 
-// }
+}
 
 function makeId(length = 5) {
   let text = ''
