@@ -1,5 +1,6 @@
 
 import fs from 'fs'
+import { utilService } from './util.service.js'
 
 export const toyService = {
     query,
@@ -10,7 +11,7 @@ export const toyService = {
 
 const toys = utilService.readJsonFile('data/toy.json')
 
-function query(filterBy = { name: '' }) {
+function query(filterBy = {}) {
     const regex = new RegExp(filterBy.name, 'i')
     var toysToReturn = toys.filter(toy => regex.test(toy.name))
     if (filterBy.price) {
@@ -40,7 +41,9 @@ function save(toy) {
         toy = toyToUpdate
     } else {
         toy._id = utilService.makeId()
-        toys.push(toy)
+        toy.createdAt = Date.now()
+        toy.inStock = true
+        toys.unshift(toy)
     }
 
     return _saveToysToFile().then(() => toy)

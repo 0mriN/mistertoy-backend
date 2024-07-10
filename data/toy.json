@@ -1,26 +1,62 @@
 [
     {
-        "_id":"t101" ,
+        "name": "Mark",
+        "price": 700,
+        "labels": [
+            "Hero",
+            "Figure"
+        ],
+        "_id": "thsLs",
+        "createdAt": 1720614696536,
+        "inStock": true
+    },
+    {
+        "_id": "t101",
         "name": "Talking Doll",
         "price": 123,
-        "labels": ["Doll", "Battery Powered", "Baby"],
+        "labels": [
+            "Doll",
+            "Battery Powered",
+            "Baby"
+        ],
         "createdAt": 1631031801011,
         "inStock": true
     },
     {
-        "_id":"t102" ,
-        "name": "SpiderMan",
-        "price": 123,
-        "labels": ["Doll", "Web Shooter", "Hero"],
-        "createdAt": 1631031801011,
-        "inStock": false
-    },
-    {
-        "_id":"t103" ,
+        "_id": "t103",
         "name": "Goku",
         "price": 123,
-        "labels": ["Doll", "Figure", "Anime"],
+        "labels": [
+            "Doll",
+            "Figure",
+            "Anime"
+        ],
         "createdAt": 1631031801011,
         "inStock": true
+    },
+    {
+        "name": "spiderman",
+        "price": 300,
+        "_id": "I526p"
+    },
+    {
+        "name": "batman",
+        "price": 400,
+        "labels": [],
+        "createdAt": 1720613783038,
+        "inStock": null,
+        "_id": "91gV5"
+    },
+    {
+        "name": "aquaman",
+        "price": 400,
+        "labels": [
+            "Doll",
+            "Hero",
+            "Figure"
+        ],
+        "createdAt": 1720613865014,
+        "inStock": false,
+        "_id": "MwWCy"
     }
 ]

@@ -1,12 +1,12 @@
 import fs from 'fs'
-import fr from 'follow-redirects'
+// import fr from 'follow-redirects'
 
-const {http, https} = fr
+// const {http, https} = fr
 
 export const utilService = {
   readJsonFile,
-  download,
-  httpGet,
+  // download,
+  // httpGet,
   makeId
 }
 
@@ -17,45 +17,45 @@ function readJsonFile(path) {
   return json
 }
 
-function download(url, fileName) {
-  return new Promise((resolve, reject) => {
-      const file = fs.createWriteStream(fileName)
-      const protocol = url.startsWith('https') ? https : http
+// function download(url, fileName) {
+//   return new Promise((resolve, reject) => {
+//       const file = fs.createWriteStream(fileName)
+//       const protocol = url.startsWith('https') ? https : http
 
-      protocol.get(url, (content) => {
-          content.pipe(file)
-          file.on('error', reject)
-          file.on('finish', () => {
-              file.close()
-              resolve()
-          })
-      })
-  })
-}
+//       protocol.get(url, (content) => {
+//           content.pipe(file)
+//           file.on('error', reject)
+//           file.on('finish', () => {
+//               file.close()
+//               resolve()
+//           })
+//       })
+//   })
+// }
 
-function httpGet(url) {
-  const protocol = url.startsWith('https') ? https : http
-  const options = {
-    method: 'GET'
-  }
+// function httpGet(url) {
+//   const protocol = url.startsWith('https') ? https : http
+//   const options = {
+//     method: 'GET'
+//   }
 
-  return new Promise((resolve, reject) => {
-    const req = protocol.request(url, options, (res) => {
-      let data = ''
-      res.on('data', (chunk) => {
-        data += chunk
-      })
-      res.on('end', () => {
-        resolve(data)
-      })
-    })
-    req.on('error', (err) => {
-      reject(err)
-    })
-    req.end()
-  })
+//   return new Promise((resolve, reject) => {
+//     const req = protocol.request(url, options, (res) => {
+//       let data = ''
+//       res.on('data', (chunk) => {
+//         data += chunk
+//       })
+//       res.on('end', () => {
+//         resolve(data)
+//       })
+//     })
+//     req.on('error', (err) => {
+//       reject(err)
+//     })
+//     req.end()
+//   })
 
-}
+// }
 
 function makeId(length = 5) {
   let text = ''
