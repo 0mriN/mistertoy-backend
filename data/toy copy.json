@@ -6,12 +6,10 @@
             "Art",
             "Puzzle"
         ],
-        "_id": "0eQXa",
         "createdAt": 1720968439326,
         "inStock": true
     },
     {
-        "_id": "t103",
         "name": "Goku ssj",
         "price": 400,
         "labels": [
@@ -27,8 +25,7 @@
         "price": 400,
         "labels": [],
         "createdAt": 1720613783038,
-        "inStock": null,
-        "_id": "91gV5"
+        "inStock": null
     },
     {
         "name": "Mark",
@@ -37,7 +34,6 @@
             "Hero",
             "Figure"
         ],
-        "_id": "thsLs",
         "createdAt": 1720614696536,
         "inStock": true
     },
@@ -48,7 +44,6 @@
             "Hero",
             "Doll"
         ],
-        "_id": "cW6XJ",
         "createdAt": 1720626377118,
         "inStock": true
     },
@@ -59,7 +54,6 @@
             "Battery Powered",
             "Baby"
         ],
-        "_id": "j9Zoj",
         "createdAt": 1720628879417,
         "inStock": true
     },
@@ -70,7 +64,6 @@
             "Figure",
             "Baby"
         ],
-        "_id": "km2yv",
         "createdAt": 1720630892550,
         "inStock": true
     },
@@ -83,7 +76,6 @@
             "Figure"
         ],
         "createdAt": 1720613865014,
-        "inStock": false,
-        "_id": "MwWCy"
+        "inStock": false
     }
 ]
